@@ -35,3 +35,34 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+
+
+
+
+ <!-- <input type="text" style="border: 1px solid black" />
+    <button onclick="parse()">Получить информацию</button>
+    <p id="wiki"></p>
+  <script>
+    const parse = async () => {
+      const url =
+        `https://ru.wikipedia.org/w/api.php?` +
+        new URLSearchParams({
+          origin: "*",
+          action: "parse",
+          page: `${document.querySelector("input").value}`,
+          format: "json",
+        });
+
+      try {
+        const req = await fetch(url);
+        const json = await req.json();
+        console.log(json.parse.text["*"]);
+        const wikiContainer = document.querySelector("#wiki");
+        wikiContainer.innerHTML = json.parse.text["*"];
+        wikiContainer.innerHTML = document.querySelector('b').parentNode.outerHTML
+      } catch (e) {
+        console.error(e);
+      }
+    };
+  </script> -->
